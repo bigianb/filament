@@ -1746,7 +1746,7 @@ Light getPointLight(uint index) {
 
     // pre-expose the light
     light.colorIntensity.w = computePreExposedIntensity(
-            colorIntensity.w, frameUniforms.exposure);
+            colorIntensity.w, getExposure());
 
     return light;
 }

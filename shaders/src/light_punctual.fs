@@ -128,7 +128,7 @@ Light getLight(const uint index) {
     // and populate the Light structure
     Light light;
     light.colorIntensity.rgb = colorIntensity.rgb;
-    light.colorIntensity.w = computePreExposedIntensity(colorIntensity.w, frameUniforms.exposure);
+    light.colorIntensity.w = computePreExposedIntensity(colorIntensity.w, getExposure());
     light.l = normalize(posToLight);
     light.attenuation = getDistanceAttenuation(posToLight, positionFalloff.w);
     light.NoL = saturate(dot(shading_normal, light.l));

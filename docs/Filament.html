@@ -2728,7 +2728,7 @@ This solution solves the storage problem but requires intermediate computations 
 <span class="line"></span>
 <span class="line">    <span class="hljs-comment">// pre-expose the light</span></span>
 <span class="line">    light.colorIntensity.w = computePreExposedIntensity(</span>
-<span class="line">            colorIntensity.w, frameUniforms.exposure);</span>
+<span class="line">            colorIntensity.w, getExposure());</span>
 <span class="line"></span>
 <span class="line">    <span class="hljs-keyword">return</span> light;</span>
 <span class="line">}</span></code></pre><center><div class="listingcaption tilde"><a class="target" name="listing_preexposedlights">&nbsp;</a><b style="font-style:normal;">Listing&nbsp;25:</b> Pre-exposing lights allows the entire shading pipeline to use half precision floats</div></center>
